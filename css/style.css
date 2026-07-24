@@ -1,1 +1,891 @@
+/* ===== Leppäveden Siivouspalvelu ===== */
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --bg:#f8f4ee;
+    --bg2:#efe6d7;
+    --white:#ffffff;
+    --green:#6d7550;
+    --green-dark:#55603f;
+    --accent:#d8c7af;
+    --text:#2d2d2d;
+    --muted:#666;
+    --radius:20px;
+    --shadow:0 15px 35px rgba(0,0,0,.08);
+    --transition:.35s ease;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    line-height:1.7;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:min(1150px,92%);
+    margin:auto;
+}
+
+/* HEADER */
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    background:rgba(248,244,238,.92);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(0,0,0,.05);
+}
+
+.header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-family:'Playfair Display',serif;
+    font-size:2rem;
+    font-weight:700;
+    color:var(--green-dark);
+}
+
+.logo span{
+    display:block;
+    font-size:.8rem;
+    letter-spacing:4px;
+    text-transform:uppercase;
+}
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    font-weight:600;
+    position:relative;
+    transition:var(--transition);
+}
+
+nav a:hover{
+    color:var(--green);
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:var(--green);
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    padding-top:90px;
+
+    background:
+        linear-gradient(rgba(248,244,238,.65),
+        rgba(248,244,238,.75)),
+        url("../images/hero.jpg") center/cover no-repeat;
+}
+
+.hero-content{
+    max-width:650px;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(3rem,6vw,5rem);
+    line-height:1.05;
+    margin-bottom:25px;
+    color:#222;
+}
+
+.hero p{
+    font-size:1.2rem;
+    color:var(--muted);
+    margin-bottom:35px;
+}
+
+.buttons{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+/* BUTTONS */
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:16px 34px;
+    border-radius:50px;
+    font-weight:700;
+    transition:var(--transition);
+}
+
+.primary{
+    background:var(--green);
+    color:white;
+    box-shadow:var(--shadow);
+}
+
+.primary:hover{
+    background:var(--green-dark);
+    transform:translateY(-4px);
+}
+
+.secondary{
+    background:white;
+    color:var(--green-dark);
+    border:2px solid var(--green);
+}
+
+.secondary:hover{
+    background:var(--green);
+    color:white;
+}
+
+/* SECTION */
+
+.section{
+    padding:100px 0;
+}
+
+.section h2{
+    font-family:'Playfair Display',serif;
+    font-size:2.8rem;
+    margin-bottom:50px;
+    text-align:center;
+}
+
+.light{
+    background:var(--bg2);
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:var(--radius);
+    padding:35px;
+    box-shadow:var(--shadow);
+    transition:var(--transition);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    font-size:1.5rem;
+    margin-bottom:15px;
+    color:var(--green-dark);
+}
+
+.card p{
+    color:var(--muted);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+nav{
+    display:none;
+}
+
+.hero{
+    text-align:center;
+}
+
+.hero-content{
+    margin:auto;
+}
+
+.buttons{
+    justify-content:center;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.section h2{
+    font-size:2.2rem;
+}
+
+}
+
+@media(max-width:600px){
+
+.logo{
+    font-size:1.6rem;
+}
+
+.hero{
+    min-height:85vh;
+}
+
+.btn{
+    width:100%;
+}
+
+.cards{
+    grid-template-columns:1fr;
+}
+/* ===========================
+   MIKSI VALITA MEIDÄT
+=========================== */
+
+.benefits{
+    max-width:900px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
+
+.benefits li{
+    list-style:none;
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:var(--shadow);
+    transition:.35s;
+    font-size:1.05rem;
+    font-weight:500;
+}
+
+.benefits li:hover{
+    transform:translateY(-8px);
+    background:var(--green);
+    color:#fff;
+}
+
+/* ===========================
+   TARJOUS
+=========================== */
+
+.offer{
+    background:linear-gradient(135deg,#6d7550,#55603f);
+    color:#fff;
+    text-align:center;
+    padding:110px 20px;
+}
+
+.offer h2{
+    font-family:"Playfair Display",serif;
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+.price{
+    width:240px;
+    height:240px;
+    margin:35px auto;
+    border-radius:50%;
+    border:8px solid rgba(255,255,255,.25);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(8px);
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+}
+
+.price span{
+    font-size:3.2rem;
+    font-weight:700;
+    line-height:1.1;
+}
+
+/* ===========================
+   LOMAKE
+=========================== */
+
+form{
+    max-width:720px;
+    margin:40px auto 0;
+    display:grid;
+    gap:20px;
+}
+
+form input,
+form textarea{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:16px;
+    background:#fff;
+    box-shadow:var(--shadow);
+    font-size:1rem;
+    font-family:inherit;
+}
+
+form textarea{
+    min-height:170px;
+    resize:vertical;
+}
+
+form input:focus,
+form textarea:focus{
+    outline:2px solid var(--green);
+}
+
+form button{
+    padding:18px;
+    border:none;
+    border-radius:50px;
+    background:var(--green);
+    color:#fff;
+    font-size:1.1rem;
+    font-weight:700;
+    cursor:pointer;
+    transition:.35s;
+}
+
+form button:hover{
+    background:var(--green-dark);
+    transform:translateY(-4px);
+}
+
+/* ===========================
+   GOOGLE MAPS
+=========================== */
+
+.map{
+    padding:0;
+}
+
+.map iframe{
+    width:100%;
+    height:500px;
+    border:0;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    background:#39432d;
+    color:#fff;
+    padding:70px 0;
+    text-align:center;
+}
+
+footer h3{
+    font-family:"Playfair Display",serif;
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+footer p{
+    margin:10px 0;
+    opacity:.9;
+}
+
+footer a{
+    color:#fff;
+}
+
+footer a:hover{
+    color:#efe6d7;
+}
+
+/* ===========================
+   SOITA
+=========================== */
+
+.floating-call,
+.floating-whatsapp{
+    position:fixed;
+    right:25px;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    text-decoration:none;
+    font-size:28px;
+    z-index:999;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    transition:.3s;
+}
+
+.floating-call{
+    bottom:110px;
+    background:#6d7550;
+}
+
+.floating-whatsapp{
+    bottom:30px;
+    background:#25D366;
+}
+
+.floating-call:hover,
+.floating-whatsapp:hover{
+    transform:scale(1.12);
+}
+
+/* ===========================
+   PEHMEÄT ANIMAATIOT
+=========================== */
+
+.card,
+.benefits li,
+.offer,
+form,
+footer{
+    animation:fadeUp .8s ease both;
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* ===========================
+   MOBIILI
+=========================== */
+
+@media(max-width:768px){
+
+.offer h2{
+font-size:2.2rem;
+}
+
+.price{
+width:180px;
+height:180px;
+}
+
+.price span{
+font-size:2.3rem;
+}
+
+footer{
+padding:50px 20px;
+}
+
+.floating-call,
+.floating-whatsapp{
+width:58px;
+height:58px;
+font-size:24px;
+right:15px;
+}
+
+}
+}
+/* =====================================
+   PREMIUM HERO
+===================================== */
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        90deg,
+        rgba(248,244,238,.92) 0%,
+        rgba(248,244,238,.75) 45%,
+        rgba(248,244,238,.15) 100%);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero h1{
+    animation:slideUp 1s ease;
+}
+
+.hero p{
+    animation:slideUp 1.3s ease;
+}
+
+.buttons{
+    animation:slideUp 1.6s ease;
+}
+
+/* =====================================
+   PALVELUKORTIT
+===================================== */
+
+.card{
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:5px;
+    top:0;
+    left:0;
+    background:linear-gradient(90deg,#6d7550,#cdbda6);
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 25px 45px rgba(0,0,0,.12);
+}
+
+.card h3{
+    margin-top:10px;
+}
+
+.card p{
+    margin-top:10px;
+}
+
+/* =====================================
+   OTSIKOT
+===================================== */
+
+.section h2::after{
+    content:"";
+    display:block;
+    width:90px;
+    height:4px;
+    background:#6d7550;
+    margin:18px auto;
+    border-radius:5px;
+}
+
+/* =====================================
+   TARJOUSYMPYRÄ
+===================================== */
+
+.price{
+    animation:pulse 4s infinite;
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.05);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+/* =====================================
+   HOVER
+===================================== */
+
+button,
+.btn,
+nav a,
+.card,
+.benefits li{
+transition:.35s;
+}
+
+/* =====================================
+   SCROLL ANIMATION
+===================================== */
+
+.reveal{
+opacity:0;
+transform:translateY(50px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:none;
+}
+
+/* =====================================
+   LASIKORTIT
+===================================== */
+
+.card,
+.benefits li{
+
+background:rgba(255,255,255,.82);
+
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,255,255,.6);
+
+}
+
+/* =====================================
+   LOMAKE
+===================================== */
+
+form{
+
+background:white;
+
+padding:40px;
+
+border-radius:25px;
+
+box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer{
+
+background:#55603f;
+
+}
+
+footer p{
+
+opacity:.9;
+
+}
+
+footer a:hover{
+
+color:#efe6d7;
+
+}
+
+/* =====================================
+   FLOATING BUTTONS
+===================================== */
+
+.floating-call:active,
+.floating-whatsapp:active{
+
+transform:scale(.9);
+
+}
+
+/* =====================================
+   ANIMAATIOT
+===================================== */
+
+@keyframes slideUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width:992px){
+
+.hero{
+
+text-align:center;
+
+}
+
+.hero-content{
+
+margin:auto;
+
+}
+
+nav{
+
+gap:15px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.header .container{
+
+padding:15px 0;
+
+}
+
+.hero{
+
+padding-top:120px;
+
+min-height:90vh;
+
+}
+
+.hero h1{
+
+font-size:2.6rem;
+
+}
+
+.hero p{
+
+font-size:1rem;
+
+}
+
+.section{
+
+padding:70px 0;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.benefits{
+
+grid-template-columns:1fr;
+
+}
+
+.price{
+
+width:180px;
+height:180px;
+
+}
+
+.price span{
+
+font-size:2.3rem;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.logo{
+
+font-size:1.4rem;
+
+}
+
+.section h2{
+
+font-size:2rem;
+
+}
+
+.btn{
+
+width:100%;
+
+}
+
+.floating-call,
+.floating-whatsapp{
+
+width:55px;
+height:55px;
+
+font-size:22px;
+
+right:15px;
+
+}
+
+      }
