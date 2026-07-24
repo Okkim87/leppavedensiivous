@@ -115,19 +115,7 @@ topButton.addEventListener("click", () => {
 // Tarjouspyyntölomake
 const form = document.querySelector("form");
 
-if (form) {
 
-    form.addEventListener("submit", function (e) {
-
-        e.preventDefault();
-
-        alert("Kiitos! Tarjouspyyntösi on vastaanotettu.");
-
-        form.reset();
-
-    });
-
-}
 
 // Hover-animaatio palvelukorteille
 document.querySelectorAll(".card").forEach(card => {
