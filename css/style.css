@@ -926,5 +926,13 @@ font-size:22px;
 right:15px;
 
 }
+    .service-image{
+    width:100%;
+    max-width:1000px;
+    display:block;
+    margin:2rem auto;
+    border-radius:18px;
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
+    }
 
       }
