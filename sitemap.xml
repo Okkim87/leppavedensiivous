@@ -1,35 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    <url>
-        <loc>https://www.leppavedensiivous.fi/</loc>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://www.leppavedensiivous.fi/kotisiivous.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://www.leppavedensiivous.fi/muuttosiivous.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://www.leppavedensiivous.fi/ikkunanpesu.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://www.leppavedensiivous.fi/yrityssiivous.html</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
+  <url><loc>https://www.leppavedensiivous.fi/</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.leppavedensiivous.fi/kotisiivous.html</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.leppavedensiivous.fi/muuttosiivous.html</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.leppavedensiivous.fi/ikkunanpesu.html</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.leppavedensiivous.fi/yrityssiivous.html</loc><lastmod>2026-07-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 </urlset>
