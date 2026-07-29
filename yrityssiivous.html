@@ -19,7 +19,7 @@
 <meta property="og:title" content="Yrityssiivous Jyväskylä | Leppäveden Siivouspalvelu">
 <meta property="og:description" content="Yritys- ja toimistosiivous Jyväskylässä, Laukaassa ja Leppävedellä joustavasti yrityksesi tarpeisiin.">
 <meta property="og:url" content="https://www.leppavedensiivous.fi/yrityssiivous.html">
-<meta property="og:image" content="https://www.leppavedensiivous.fi/yrityssiivous.png">
+<meta property="og:image" content="https://www.leppavedensiivous.fi/yrityssiivous.webp">
 <meta property="og:image:alt" content="Yrityssiivous Jyväskylässä, Laukaassa ja Leppävedellä">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -66,7 +66,8 @@ gtag('config','G-11C0K4XJT7');
 <header class="header">
 <div class="container">
 <a class="logo" href="index.html">Leppäveden <span>Siivouspalvelu</span></a>
-<nav aria-label="Päävalikko">
+<button class="business-menu-button" type="button" aria-expanded="false" aria-controls="business-menu">Valikko</button>
+<nav id="business-menu" aria-label="Päävalikko">
 <a href="index.html">Etusivu</a>
 <a href="#palvelu">Palvelu</a>
 <a href="#kohteet">Kohteet</a>
@@ -91,7 +92,7 @@ gtag('config','G-11C0K4XJT7');
 
 <section class="section business-intro">
 <div class="container">
-<img src="yrityssiivous.png" alt="Yrityssiivous ja toimistosiivous Jyväskylässä" class="service-image">
+<img src="yrityssiivous.webp" alt="Yrityssiivous ja toimistosiivous Jyväskylässä" class="service-image">
 <div class="business-copy">
 <h2>Joustava yrityssiivous Jyväskylän seudulla</h2>
 <p>Siisti työympäristö lisää viihtyvyyttä ja antaa asiakkaillesi hyvän ensivaikutelman. Leppäveden Siivouspalvelu tarjoaa yrityssiivousta Jyväskylässä, Laukaassa ja Leppävedellä pienille ja keskisuurille toimitiloille.</p>
@@ -210,5 +211,6 @@ gtag('config','G-11C0K4XJT7');
 <a class="floating-whatsapp" href="https://wa.me/358442365158" target="_blank" rel="noopener" aria-label="Lähetä WhatsApp-viesti">💬</a>
 
 <script src="js/script.js"></script>
+<script src="js/yrityssiivous-menu.js"></script>
 </body>
 </html>
