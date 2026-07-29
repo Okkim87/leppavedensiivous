@@ -1,0 +1,52 @@
+#lomake .container{
+    max-width:820px;
+}
+
+#lomake form{
+    display:grid;
+    gap:20px;
+    background:#fff;
+    padding:45px;
+    border-radius:25px;
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+}
+
+#lomake form input,
+#lomake form textarea{
+    width:100%;
+    padding:18px;
+    border:1px solid rgba(109,117,80,.14);
+    border-radius:16px;
+    background:#fff;
+    box-shadow:var(--shadow);
+    font-size:1rem;
+    font-family:inherit;
+}
+
+#lomake form textarea{
+    min-height:170px;
+    resize:vertical;
+}
+
+#lomake form input:focus,
+#lomake form textarea:focus{
+    outline:2px solid var(--green);
+}
+
+#lomake form button{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:50px;
+    background:var(--green);
+    color:#fff;
+    font-size:1.1rem;
+    font-weight:700;
+    cursor:pointer;
+    transition:.35s;
+}
+
+#lomake form button:hover{
+    background:var(--green-dark);
+    transform:translateY(-4px);
+}
