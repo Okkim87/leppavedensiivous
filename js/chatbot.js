@@ -153,7 +153,7 @@
 
     const priceAnswer = () => {
         if (lastTopic === "Kotisiivous") {
-            return "Kotisiivouksen sivulla ilmoitettu hinta on 35 € / h, sisältäen arvonlisäveron. Tarkka kokonaiskustannus riippuu työn määrästä.";
+            return "Siivouksen tuntihinta on 40 € / h, sisältäen arvonlisäveron. Tarkka kokonaiskustannus riippuu työn määrästä.";
         }
         if (lastTopic === "Yrityssiivous") {
             return "Yrityssiivouksen hintaan vaikuttavat tilan koko, tilatyyppi, palvelun sisältö ja käyntitiheys. Kun kerrot nämä tiedot, saat kohteeseen perustuvan maksuttoman tarjouksen.";
@@ -164,7 +164,7 @@
         if (lastTopic === "Ikkunanpesu") {
             return "Ikkunanpesun hinta määräytyy muun muassa ikkunoiden määrän, koon ja rakenteen perusteella. Kerro tarjouspyynnössä ikkunoiden lukumäärä ja kohteen sijainti.";
         }
-        return "Kotisiivouksen sivulla ilmoitettu hinta on 35 € / h sis. ALV. Muut palvelut hinnoitellaan kohteen ja työn sisällön mukaan. Maksuttoman tarjouksen saat jättämällä kohteen tiedot.";
+        return "Siivouksen tuntihinta on 40 € / h sis. ALV. Kilometrikorvaus on 0,55 € / km Leppävedeltä. Maksuttoman tarjouksen saat jättämällä kohteen tiedot.";
     };
 
     const responseFor = (rawText) => {
